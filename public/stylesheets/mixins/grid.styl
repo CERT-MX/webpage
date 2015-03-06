@@ -1,0 +1,74 @@
+//
+// mixins/grid
+// --------------------------------------------------
+
+
+grid_generator(size_col = 0, gutter = 0, max_cols = max-cols)
+  if size_col == 0 and gutter == 0
+    .row
+      display: table
+      position: relative
+      margin: 0 5%
+      width: 90%
+
+    [class *= "-column"]
+      display: table
+      position: relative
+      float: left
+      margin: 0
+      width: 100%
+  else if (size_col + gutter) < 81
+    gm_margin = gutter_columns(size_col, gutter, max_cols)
+
+    .row
+      display: table
+      position: relative
+      width: 100%
+
+    [class *= "-column"]
+      display: table
+      position: relative
+      float: left
+      margin: 0 gutter_columns(size_col, gutter, max_cols)
+
+    for i in (1..max_cols)
+      col_width = width_column(i, size_col, gutter)
+      sizer = grid_size(size_col, gutter, max_cols)
+      .{numbers(i)}-columns
+        width: ((col_width / sizer) * 100)%
+  else
+    .row
+      display: table
+      position: relative
+      width: grid_size(size_col, gutter, max_cols)
+
+    [class *= "-column"]
+      display: table
+      position: relative
+      float: left
+      margin: 0 gutter_columns(size_col, gutter, max_cols)
+
+    for i in (1..max_cols)
+      col_width = width_column(i, size_col, gutter)
+      sizer = grid_size(size_col, gutter, max_cols)
+      if i == 1
+        .one-column
+          width: ((col_width / sizer) * 100)%
+       else
+        .{numbers(i)}-columns
+          width: ((col_width / sizer) * 100)%
+
+grid_offset(size_col, gutter, max_cols = max-cols)
+  for i in (1..max_cols - 1)
+    offset = (i * size_col) + (i * gutter) + (gutter / 2)
+    sizer = grid_size(size_col, gutter, max_cols)
+    .offset-{numbers(i)}
+      margin-left: ((offset / sizer) * 100)%
+
+grid_centered(size_col, gutter, max_cols = max-cols)
+  for i in (1..max_cols - 1)
+    col_width = width_column(i, size_col, gutter)
+    sizer = grid_size(size_col, gutter, max_cols)
+    marger = (sizer - col_width) / 2
+    .centered-{numbers(i)}
+      margin: 0 ((marger / sizer) * 100)%

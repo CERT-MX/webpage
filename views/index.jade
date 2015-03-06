@@ -1,5 +1,47 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  #home
+    #slogan
+      .logo
+        img(src="/images/cs_logo_web_2.png")
+      h1 Comunidad de JavaScript en Colima, México
+
+    #show-more
+      i.fa.fa-angle-down
+
+  .container
+    #menu
+      .menus
+        a.show-menu(href="#")
+          i.fa.fa-bars
+        a.link(href="http://colscript.tumblr.com/", target="_blank")
+          | Blog
+        .socials
+          a(href="http://github.com/ColScript", target="_blank")
+            i.fa.fa-github
+          a(href="http://twitter.com/colscript", target="_blank")
+            i.fa.fa-twitter
+          a(href="http://www.facebook.com/ColScriptColima", target="_blank")
+            i.fa.fa-facebook
+
+    #description
+      .row.left-side
+        .three-columns
+          i.fa.fa-lightbulb-o.icon
+        .nine-columns
+          h1 ColScript nace como una idea
+          p
+            | El día Martes 10 de Junio de 2014 fue llevada a cabo la primera reunión, gracias a la afinidad de desarrollar software escrito en JavaScript y a la necesidad de compartir y aprender nuevas tecnologías basadas precisamente en éste lenguaje de programación.
+      .row.right-side
+        .nine-columns
+          h1 Objetivo
+          p
+            | Ser una comunidad dedicada al lenguaje JavaScript en la cual podremos compartir, aprender, discutir, escribir y crear contenido basado en JavaScript y tecnologías alrededor del lenguaje.
+        .three-columns
+          i.fa.fa-bullseye.icon
+
+    #meetings
+      .row
+        .twelve-columns
+          h1 Reuniones
