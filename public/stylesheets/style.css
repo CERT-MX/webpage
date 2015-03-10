@@ -679,7 +679,7 @@ textarea:focus {
   position: absolute;
   left: 50%;
   font-family: "Rokkitt";
-  margin-left: -60px;
+  margin-left: -76px;
   text-decoration: none;
 }
 #menu .menus .show-menu {
@@ -745,8 +745,8 @@ textarea:focus {
 }
 #meetings {
   margin: 80px 0 0;
-  background-color: #d5dd40;
-  color: #3f4700;
+  background-color: #f6de56;
+  color: #473a00;
   padding: 60px 0;
 }
 #meetings h1 {
