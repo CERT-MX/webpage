@@ -2,8 +2,35 @@
 // config/responsive_large
 // --------------------------------------------------
 
-
 @media screen and (min-width: 1200px)
   grid_generator(columns, gutter)
   grid_offset(columns, gutter)
   grid_centered(columns, gutter)
+
+  #home
+    #slogan
+      width: 680px
+      height: 360px
+      margin-top: -180px
+      margin-left: -340px
+
+      .logo
+        width: 480px
+        height: 213px
+
+  #menu
+    height: 80px
+    .menus
+      width: 1170px
+
+      .link
+        margin: 16px 0px
+
+      .socials
+        width: 30%
+
+        a
+          width: 50px
+
+      .show-menu
+        display: none

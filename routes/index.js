@@ -3,8 +3,13 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'ColScript' });
 });
+
+router.get('/alerts', function(req, res) {
+  res.render('alerts/index', { title: 'Alerts' });
+});
+
 router.get('/consulta', function (req, res){
 	var resu = [];
 	var collection = req.db.collection('users');
