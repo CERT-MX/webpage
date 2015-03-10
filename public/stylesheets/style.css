@@ -517,7 +517,7 @@ textarea:focus {
     height: 104px;
   }
   #menu {
-    height: auto;
+    height: 80px;
   }
   #menu .menus {
     width: 90%;
@@ -529,11 +529,13 @@ textarea:focus {
     width: 100%;
     margin-top: 81px;
     text-align: center;
-    border-top: 1px solid #f00;
+    border-top: 1px solid #8bbfff;
+    display: none;
   }
   #menu .menus .socials {
     width: 80%;
     margin: 0 10%;
+    display: none;
   }
   #menu .menus .socials a {
     width: 33.333333%;
@@ -658,12 +660,27 @@ textarea:focus {
   }
 }
 #menu {
-  background: #ccc;
-  border-bottom: 1px solid #aeaeae;
+  background: #598dcf;
+  border-bottom: 1px solid #3b6fb1;
+  top: 0px;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+  height: 80px;
 }
 #menu .menus {
   margin: 0 auto;
   overflow: hidden;
+}
+#menu .menus .go-home {
+  color: #fff;
+  font-weight: bold;
+  font-size: 70px;
+  position: absolute;
+  left: 50%;
+  font-family: "Rokkitt";
+  margin-left: -60px;
+  text-decoration: none;
 }
 #menu .menus .show-menu {
   position: absolute;
@@ -671,12 +688,18 @@ textarea:focus {
   line-height: 2.6;
   font-size: 30px;
   padding: 0 3%;
+  color: #bdf1ff;
 }
 #menu .menus .link {
   float: left;
   padding: 14px 14px 14px 0px;
   font-size: 16px;
   text-decoration: none;
+  color: #bdf1ff;
+  font-weight: bold;
+}
+#menu .menus .link:hover {
+  color: #fff;
 }
 #menu .menus .socials {
   float: right;
@@ -687,6 +710,10 @@ textarea:focus {
   margin: 15px 0;
   text-align: center;
   line-height: 4.2;
+  color: #bdf1ff;
+}
+#menu .menus .socials a:hover {
+  color: #fff;
 }
 #menu .menus .socials a i {
   font-size: 25px;
@@ -696,6 +723,7 @@ textarea:focus {
 }
 #description .icon {
   font-size: 200px;
+  color: #727275;
 }
 #description h1 {
   font-size: 3.5em;
@@ -716,8 +744,31 @@ textarea:focus {
   text-align: center;
 }
 #meetings {
-  margin: 80px 0;
+  margin: 80px 0 0;
+  background-color: #d5dd40;
+  color: #3f4700;
+  padding: 60px 0;
 }
 #meetings h1 {
   text-align: center;
+  font-size: 3.5em;
+}
+#meetings p {
+  font-size: 20px;
+  margin: 20px 0 40px 0;
+}
+#meetings .four-columns {
+  margin-bottom: 35px;
+}
+#meetings .four-columns img {
+  border: 3px solid #000;
+}
+#footer {
+  width: 100%;
+  background: #000;
+  color: #fff;
+}
+#footer span {
+  display: block;
+  padding: 20px 0;
 }
